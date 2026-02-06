@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -10,53 +11,39 @@ body {
   color: #fff;
 }
 
-/* HERO */
-.hero {
-  position: relative;
+/* =========================
+   TOP VIDEO BANNER
+========================= */
+.top-banner {
   width: 100%;
-  height: 100vh;
+  height: 340px;        /* Banner-Höhe */
+  background: #000;
   overflow: hidden;
+  position: relative;
 }
 
-/* VIDEO */
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
+.banner-video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;    /* DAS ist der Key */
+  display: block;
 }
 
-/* DARK OVERLAY */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 1;
-}
-
-/* CONTENT */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* =========================
+   BRAND SECTION
+========================= */
+.brand {
+  padding: 60px 20px;
   text-align: center;
 }
 
-/* LOGO */
-.hero-logo {
-  width: 120px;
+.brand-logo {
+  width: 110px;
   margin-bottom: 20px;
 }
 
-/* TEXT */
-.hero-content h1 {
-  font-size: 3.5rem;
+.brand h1 {
+  font-size: 3rem;
   letter-spacing: 0.15em;
 }
 
@@ -67,8 +54,31 @@ body {
 }
 
 .claim {
+  display: block;
   margin-top: 20px;
   font-size: 0.95rem;
   letter-spacing: 0.1em;
   opacity: 0.7;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.08em;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.8;
 }
