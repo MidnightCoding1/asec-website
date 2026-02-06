@@ -8,16 +8,17 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+/* =========================
+   GLOBAL BACKGROUND EFFECT
+   (black + blue moving right-angle lines)
+========================= */
 body {
-  color: #fff;
   background: #000;
+  color: #fff;
   overflow-x: hidden;
   position: relative;
 }
 
-/* =========================
-   GLOBAL BACKGROUND (LINES)
-========================= */
 body::before {
   content: "";
   position: fixed;
@@ -27,21 +28,21 @@ body::before {
   background:
     repeating-linear-gradient(
       0deg,
-      rgba(0, 150, 255, 0.05),
-      rgba(0, 150, 255, 0.05) 1px,
+      rgba(0, 140, 255, 0.06),
+      rgba(0, 140, 255, 0.06) 1px,
       transparent 1px,
-      transparent 40px
+      transparent 48px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(0, 150, 255, 0.04),
-      rgba(0, 150, 255, 0.04) 1px,
+      rgba(0, 140, 255, 0.05),
+      rgba(0, 140, 255, 0.05) 1px,
       transparent 1px,
-      transparent 60px
+      transparent 72px
     );
 
-  filter: drop-shadow(0 0 6px rgba(0, 150, 255, 0.2));
-  animation: gridMove 30s linear infinite;
+  animation: gridMove 40s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(0, 140, 255, 0.25));
 }
 
 @keyframes gridMove {
@@ -49,12 +50,12 @@ body::before {
     background-position: 0 0, 0 0;
   }
   to {
-    background-position: 0 400px, 600px 0;
+    background-position: 0 600px, 800px 0;
   }
 }
 
 /* =========================
-   TOP NAVBAR
+   NAVBAR
 ========================= */
 .topbar {
   position: fixed;
@@ -66,7 +67,7 @@ body::before {
   overflow: hidden;
 }
 
-/* Moving shine */
+/* SHINE EFFECT */
 .topbar::after {
   content: "";
   position: absolute;
@@ -122,68 +123,15 @@ body::before {
 .top-banner {
   margin-top: 56px;
   width: 100%;
-  height: 300px;
+  height: 260px;   /* bewusst größer */
   overflow: hidden;
+  background: #000;
 }
 
 .banner-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-}
-
-/* =========================
-   BRAND SECTION
-========================= */
-.brand {
-  padding: 50px 20px 60px;
-  text-align: center;
-  margin-top: -40px;
-}
-
-.brand-logo {
-  width: 120px;
-  margin-bottom: 18px;
-}
-
-.brand h1 {
-  font-size: 3rem;
-  letter-spacing: 0.15em;
-}
-
-.subtitle {
-  margin-top: 10px;
-  font-size: 1.05rem;
-  opacity: 0.85;
-}
-
-.claim {
+  object-position: center center;
   display: block;
-  margin-top: 18px;
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  opacity: 0.7;
-}
-
-/* =========================
-   ABOUT
-========================= */
-.about {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 1.7rem;
-  margin-bottom: 20px;
-  letter-spacing: 0.08em;
-}
-
-.about p {
-  font-size: 1rem;
-  line-height: 1.7;
-  opacity: 0.8;
 }
